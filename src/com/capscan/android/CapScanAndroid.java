@@ -17,9 +17,9 @@ public class CapScanAndroid extends Activity {
 		Button takePicButton = (Button) findViewById(R.id.takepic);
 		takePicButton.setOnClickListener(new Button.OnClickListener() {
 			public void onClick(View v) {
-				Intent captureIntent = new Intent("CapScanAndroid.CAPTUREBOTTLECAP");
-				ComponentName bCCComp = new ComponentName("com.capscan.android", "CaptureImage");
-				captureIntent.setComponent(bCCComp);
+				Intent captureIntent = new Intent("com.capscan.android.CaptureBottleCap");
+				//ComponentName bCCComp = new ComponentName("com.capscan.android", "CaptureImage");
+				//captureIntent.setComponent(bCCComp);
 				startActivity(captureIntent);
 			}
 		});

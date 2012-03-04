@@ -26,7 +26,7 @@
             android:name="CaptureImage"
             android:label="@string/capimg_name" >
             <intent-filter>
-                <action android:name="android.intent.action.CAPTUREBOTTLECAP" />
+                <action android:name="com.capscan.android.CaptureBottleCap" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
