@@ -21,6 +21,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".CaptureImage"
+            android:label="@string/capimg_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.BottleCapCapture" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
