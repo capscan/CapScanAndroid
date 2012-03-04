@@ -5,6 +5,9 @@
     android:versionName="1.0" >
 
     <uses-sdk android:minSdkVersion="8" />
+    <permission android:name="android.permission.CAMERA"></permission>
+    <permission android:name="android.hardware.camera"></permission>
+    <permission android:name="android.hardware.camera.autofocus"></permission>
 
     <application
         android:icon="@drawable/ic_launcher"
