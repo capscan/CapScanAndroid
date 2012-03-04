@@ -2,13 +2,33 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:background="@drawable/wood"
     android:gravity="center_horizontal|center_vertical"
     android:orientation="vertical" >
 
-    <Button
-        android:id="@+id/takepic"
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Take a Photo" />
+        android:layout_weight="0.47" >
+
+        <Button
+            android:id="@+id/takepic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="118dp"
+            android:text="Take a Photo" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/takepic"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/newlogo" />
+
+    </RelativeLayout>
 
 </LinearLayout>
