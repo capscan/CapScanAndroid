@@ -15,8 +15,9 @@ public final class R {
     }
     public static final class id {
         public static final int capImgButton=0x7f050001;
+        public static final int imgview=0x7f050002;
         public static final int relativeLayout1=0x7f050000;
-        public static final int takepic=0x7f050002;
+        public static final int takepic=0x7f050003;
     }
     public static final class layout {
         public static final int imagecapture=0x7f030000;

@@ -17,7 +17,7 @@ import android.widget.Toast;
 
 public class CaptureImage extends Activity {
 
-	ImageView img;
+	ImageView img = (ImageView) findViewById(R.id.imgview);
 	private static int CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE = 555;
 
 	/** Called when the activity is first created. */
@@ -25,8 +25,6 @@ public class CaptureImage extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.imagecapture);
-
-		img = new ImageView(this);
 
 		Button takePicButton = (Button) findViewById(R.id.capImgButton);
 		takePicButton.setOnClickListener(new Button.OnClickListener() {
