@@ -9,6 +9,7 @@
     <permission android:name="android.permission.CAMERA" />
     <permission android:name="android.hardware.camera" />
     <permission android:name="android.hardware.camera.autofocus" />
+    <permission android:name="android.permission.ACCESS_FINE_LOCATION" android:required="false" />
 
     <application
         android:icon="@drawable/ic_launcher"
