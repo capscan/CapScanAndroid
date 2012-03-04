@@ -17,7 +17,6 @@ import android.widget.Toast;
 
 public class CaptureImage extends Activity {
 
-	ImageView img = (ImageView) findViewById(R.id.imgview);
 	private static int CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE = 555;
 
 	/** Called when the activity is first created. */
@@ -41,9 +40,14 @@ public class CaptureImage extends Activity {
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		if(requestCode == CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE) {
 			if(resultCode == RESULT_OK) {
+				ImageView img = (ImageView) findViewById(R.id.imgview);
 				Bundle extras = data.getExtras();
 				Bitmap mImageBitmap = (Bitmap) extras.get("data");
 				img.setImageBitmap(mImageBitmap);
+				
+			}
+			else if(resultCode == RESULT_CANCELED) {
+				Toast.makeText(this, "Image Capture Canceled", Toast.LENGTH_LONG).show();
 			}
 			else {
 				Toast.makeText(this, "Image Capture Failed", Toast.LENGTH_LONG).show();

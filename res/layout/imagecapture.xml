@@ -16,15 +16,14 @@
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="18dp"
-            android:text="Capture Image" />
+            android:text="@string/captimage" />
 
         <ImageView
             android:id="@+id/imgview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentRight="true"
-            android:src="@android:drawable/alert_dark_frame" />
+            android:src="@drawable/newlogo" />" />
 
     </RelativeLayout>
 

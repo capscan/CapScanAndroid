@@ -21,10 +21,9 @@
             android:text="Take a Photo" />
 
         <ImageView
-            android:id="@+id/imageView1"
+            android:id="@+id/logoview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/takepic"
             android:layout_alignParentLeft="true"
             android:src="@drawable/newlogo" />
 
