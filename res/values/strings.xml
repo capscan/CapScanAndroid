@@ -3,5 +3,6 @@
 
     <string name="hello">Hello World, CapScanAndroid!</string>
     <string name="app_name">CapScanAndroid</string>
+    <string name="welcome">Welcome to CapScan!</string>
 
 </resources>
