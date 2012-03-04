@@ -10,8 +10,11 @@ import android.content.pm.ResolveInfo;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.widget.ImageView;
 
 public class CaptureImage extends Activity {
+	
+	ImageView img;
 	
 	/** Called when the activity is first created. */
 	@Override
@@ -19,9 +22,16 @@ public class CaptureImage extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.imagecapture);
 		
+		img = new ImageView(this);
+		
 		if(isIntentAvailable(this, "MediaStore.ACTION_IMAGE_CAPTURE")) {
-			dispatchTakePictureIntent();
+			Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+			startActivityForResult(takePictureIntent, 1);
 		}
+	}
+	
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		handleSmallCameraPhoto(data);
 	}
 	
 	public static boolean isIntentAvailable(Context context, String action) {
@@ -40,6 +50,6 @@ public class CaptureImage extends Activity {
 	private void handleSmallCameraPhoto(Intent intent) {
 	    Bundle extras = intent.getExtras();
 	    Bitmap mImageBitmap = (Bitmap) extras.get("data");
-	    mImageView.setImageBitmap(mImageBitmap);
+	    img.setImageBitmap(mImageBitmap);
 	}
 }
