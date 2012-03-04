@@ -1,10 +1,10 @@
 package com.capscan.android;
 
 import android.app.Activity;
+import android.content.ComponentName;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.Button;
 
 public class CapScanAndroid extends Activity {
@@ -17,10 +17,12 @@ public class CapScanAndroid extends Activity {
 		Button takePicButton = (Button) findViewById(R.id.takepic);
 		takePicButton.setOnClickListener(new Button.OnClickListener() {
 			public void onClick(View v) {
-				Intent captureIntent = new Intent("BottleCapCapture");
+				Intent captureIntent = new Intent("CapScanAndroid.CAPTUREBOTTLECAP");
+				ComponentName bCCComp = new ComponentName("com.capscan.android", "CaptureImage");
+				captureIntent.setComponent(bCCComp);
 				startActivity(captureIntent);
 			}
 		});
-
+		
 	}
 }

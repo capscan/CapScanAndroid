@@ -5,9 +5,10 @@
     android:versionName="1.0" >
 
     <uses-sdk android:minSdkVersion="8" />
-    <permission android:name="android.permission.CAMERA"></permission>
-    <permission android:name="android.hardware.camera"></permission>
-    <permission android:name="android.hardware.camera.autofocus"></permission>
+
+    <permission android:name="android.permission.CAMERA" />
+    <permission android:name="android.hardware.camera" />
+    <permission android:name="android.hardware.camera.autofocus" />
 
     <application
         android:icon="@drawable/ic_launcher"
@@ -22,10 +23,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".CaptureImage"
+            android:name="CaptureImage"
             android:label="@string/capimg_name" >
             <intent-filter>
-                <action android:name="android.intent.action.BottleCapCapture" />
+                <action android:name="android.intent.action.CAPTUREBOTTLECAP" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
     </application>
