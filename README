@@ -1,3 +1,12 @@
 CapScan for Android
 
-A CapScan client for Android. Very simple for now, but more to come!
+A CapScan client for Android. The very beginning of a neat little app.
+
+Current capabilities:
+- Take a picture and display it back internally
+
+Next functionality to implement:
+- Save picture to storage and upload to a server
+- Do this in the background and publish a notification on completion
+- Start parsing text response from server
+- Backend stuff
