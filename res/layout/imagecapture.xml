@@ -3,8 +3,9 @@
     android:id="@+id/relativeLayout1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/wood_pattern"
-    android:orientation="vertical" >
+    android:background="@drawable/bright_squares"
+    android:orientation="vertical"
+    android:tileMode="repeat" >
 
     <Button
         android:id="@+id/capImgButton"
@@ -12,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="18dp"
+        android:layout_marginBottom="4dp"
         android:text="@string/captimage" />
 
     <ImageView
